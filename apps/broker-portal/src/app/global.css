@@ -1,0 +1,15 @@
+@import 'tailwindcss';
+
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+@source "../../../../libs/delightful/src";
+
+@theme {
+  --color-brand-primary: #000080;
+  --color-brand-secondary: #10b981;
+  --color-brand-background: #add8e6;
+  --color-brand-header: #0053aa;
+  --color-brand-footer: #000000;
+}

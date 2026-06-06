@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+@import '../../global.css';
+
+.hd-background-color {
+  background-color: var(--color-brand-header);
+}
