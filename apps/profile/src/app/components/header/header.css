@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+@import '../../global.css';
+
+.hd-background-color {
+  background-color: #79baec;
+}

@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+@import '../../global.css';
+
+.ft-background-color {
+  background-color: #8e8e8e;
+}

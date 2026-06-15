@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 
 import { getUserSession } from '@/lib/keycloak/session';
 import './header.css';

@@ -1,0 +1,10 @@
+{
+  "name": "@monorepo/profile-e2e",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "implicitDependencies": [
+      "@monorepo/profile"
+    ]
+  }
+}

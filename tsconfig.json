@@ -17,6 +17,12 @@
     },
     {
       "path": "./apps/broker-portal"
+    },
+    {
+      "path": "./apps/profile-e2e"
+    },
+    {
+      "path": "./apps/profile"
     }
   ]
 }

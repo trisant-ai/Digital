@@ -1,0 +1,7 @@
+@import 'tailwindcss';
+
+@theme {
+  /* This creates the utility class: font-roboto */
+  --font-roboto: var(--font-roboto), sans-serif;
+  --font-sans: var(--font-roboto), sans-serif;
+}
