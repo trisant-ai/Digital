@@ -73,7 +73,7 @@ export default function About() {
             <tbody>
               <SkillRow
                 label="Technologies"
-                value="Node.js, Next.js, React.js TypeScript, JavaScript, Zustand, Express.js, Nest.js, Strapi (Headless CMS), StoryBook, Docker, Kubernetes, EFK, Azure APIM, HTML, CSS, Styled-Components, React Testing Lib, Cypress, Nx build system"
+                value="Node.js, Next.js, React.js TypeScript, JavaScript, Zustand, Express.js, Nest.js, Strapi (Headless CMS), StoryBook, Docker, Kubernetes, EFK, Azure APIM, HTML, Tailwind CSS, Styled-Components, React Testing Lib, Cypress, Nx build system"
               />
               <SkillRow
                 label="Azure Courses"
