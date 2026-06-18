@@ -1,6 +1,5 @@
-@import 'tailwindcss';
-@import '../../global.css';
+@reference "../../global.css";
 
 .ft-background-color {
-  background-color: #8e8e8e;
+  @apply bg-[#8e8e8e];
 }

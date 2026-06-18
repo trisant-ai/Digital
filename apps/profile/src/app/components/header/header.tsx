@@ -1,29 +1,26 @@
-import Image from 'next/image';
 import Link from 'next/link';
+import MobileMenu from './mobile-menu';
 
 import './header.css';
 
-async function Header() {
+function Header() {
   return (
-    <div className=" w-screen h-[8dvh] hd-background-color flex flex-row justify-around">
-      <div className="mt-[25] mb-[25] mr-[40] ml-[40] font-roboto font-400">
+    <div className="desktop-header-flex-box hd-background-color">
+      <div className="p-6">
         <Link href="/"> Home </Link>
       </div>
       <div>
-        <header>
-          <nav>
+        <header className="relative">
+          <nav className="desktop-nav">
             <ul>
-              <li className="inline-block mt-[25] mb-[25] mr-[40] ml-[40] font-roboto font-400">
-                Publications
-              </li>
-              <li className="inline-block mt-[25] mb-[25] mr-[40] ml-[40] font-roboto font-400">
+              <li className="inline-block p-6">Publications</li>
+              <li className="inline-block p-6">
                 <Link href="/about"> About </Link>
               </li>
-              <li className="inline-block mt-[25] mb-[25] mr-[40] ml-[40] font-roboto font-400">
-                Contact
-              </li>
+              <li className="inline-block p-6">Contact</li>
             </ul>
           </nav>
+          <MobileMenu />
         </header>
       </div>
     </div>

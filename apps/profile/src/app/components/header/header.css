@@ -1,6 +1,29 @@
-@import 'tailwindcss';
-@import '../../global.css';
+@reference "../../global.css";
+
+.desktop-header-flex-box {
+  @apply flex flex-row justify-around font-roboto;
+}
+
+.desktop-nav {
+  @apply hidden sm:block;
+}
 
 .hd-background-color {
-  background-color: #79baec;
+  @apply bg-[#79baec];
+}
+
+.mobile-button {
+  @apply flex sm:hidden items-center justify-center p-6;
+}
+
+.mobile-menu {
+  @apply absolute top-15 right-0 w-30 bg-slate-100 shadow-md border-t sm:hidden;
+}
+
+.mobile-menu-list {
+  @apply flex flex-col;
+}
+
+.mobile-menu-item {
+  @apply block px-4 py-3 hover:bg-gray-100;
 }

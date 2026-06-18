@@ -1,0 +1,19 @@
+@reference "../../global.css";
+
+.landing-page-flex-box {
+  @apply flex flex-col gap-6 justify-center items-center min-h-[calc(100vh-150px)] w-full py-5;
+  @apply sm:gap-6;
+  @apply lg:flex-row lg:gap-16 lg:py-16;
+  @apply xl:gap-10;
+}
+
+.font-text {
+  @apply xl:text-lg font-roboto;
+}
+
+.profile-img {
+  @apply mx-auto rounded-xl object-cover;
+  @apply w-64 h-64;
+  @apply lg:w-80 lg:h-130;
+  @apply xl:w-100 xl:h-110;
+}

@@ -12,10 +12,10 @@ const roboto = Roboto({
   variable: '--font-roboto',
 });
 
-export const metadata = {
-  title: 'Vishwajeet Wadhwa | Director| Software Architect',
+export const metadata: Metadata = {
+  title: 'Vishwajeet Wadhwa Director Software Architect',
   description:
-    'Vishwajeet Wadhwa | Director| Software Architect| Technology leader, SaaS, Full Stack Software Development | Sapiens Digital R&D | Performance Improvement | Node.js, Next.js, React, TypeScript, Kubernetes, Azure, Claude TensorFlow, PyTorch, Scikit Learn | Lead Organisations | Digital Transformation',
+    'Vishwajeet Wadhwa, Director, Software Architect, Waterloo, Ontario, Canada, India, United Kingdom, Technology leader, SaaS, Full Stack Software Development  Sapiens Digital R&D  Performance Improvement Node.js, Next.js, React, TypeScript, Kubernetes, Azure, Claude TensorFlow, PyTorch, Scikit Learn, Lead Organisations, Digital Transformation',
 };
 
 export default function RootLayout({
@@ -25,9 +25,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${roboto.variable} antialiased`}>
+      <body
+        className={`flex min-h-screen flex-col ${roboto.variable} antialiased`}
+      >
         <Header />
-        {children}
+        {/** Main Body Container */}
+        <main className="grow">{children}</main>
         <Footer />
       </body>
     </html>
