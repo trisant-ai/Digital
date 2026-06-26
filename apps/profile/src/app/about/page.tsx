@@ -136,31 +136,15 @@ export default function About() {
                     width={125}
                     height={125}
                   />
-                  {/* <CompanyBadge
-                    label="wcb"
-                    color="bg-blue-800"
-                    textColor="text-white"
-                    subtitle="Saskatchewan Workers' Compensation"
-                  /> */}
+
                   <Image
                     src="/luba.png"
                     alt="LUBA Logo"
                     width={100}
                     height={100}
                   />
-                  {/* <CompanyBadge
-                    label="LUBA"
-                    color="bg-yellow-500"
-                    textColor="text-black"
-                    subtitle="WORKERS' COMP"
-                  /> */}
+
                   <Image src="/sc.png" alt="LUBA Logo" width={80} height={80} />
-                  {/* <CompanyBadge
-                    label="wcc"
-                    color="bg-gray-700"
-                    textColor="text-white"
-                    subtitle="sc.gov"
-                  /> */}
                 </div>
               </>
             }
@@ -546,26 +530,5 @@ function ExperienceBlock({
 function RoleTitle({ children }: { children: React.ReactNode }) {
   return (
     <p className="font-bold font-roboto font-400 text-lg mb-1">{children}</p>
-  );
-}
-
-function CompanyBadge({
-  label,
-  color,
-  textColor,
-  subtitle,
-}: {
-  label: string;
-  color: string;
-  textColor: string;
-  subtitle: string;
-}) {
-  return (
-    <div
-      className={`${color} ${textColor} px-2 py-1 rounded-sm text-[10px] font-bold leading-tight`}
-    >
-      <div>{label.toUpperCase()}</div>
-      <div className="font-normal text-[9px] opacity-80">{subtitle}</div>
-    </div>
   );
 }

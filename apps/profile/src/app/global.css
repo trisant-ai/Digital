@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import 'tailwindcss' source('../');
 
 @theme {
   /* This creates the utility class: font-roboto */
