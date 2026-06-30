@@ -5,3 +5,16 @@
   --font-roboto: var(--font-roboto), sans-serif;
   --font-sans: var(--font-roboto), sans-serif;
 }
+
+/* Horizontal Scroll */
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+a,
+p {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}

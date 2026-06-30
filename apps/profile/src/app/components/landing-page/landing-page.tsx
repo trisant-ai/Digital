@@ -37,8 +37,8 @@ function LandingPage() {
         <p className="font-text ">
           My technical toolkit spans Claude, Node.js, Next.js, React,
           TypeScript, Nest.js, Kubernetes, Azure, and AI/ML frameworks including
-          TensorFlow, PyTorch, Scikit Learn, Dynatrace, Datadog, and SonarQube—
-          and I continuously invest in expanding it.
+          TensorFlow, PyTorch, Scikit Learn, Dynatrace, Datadog, SonarQube and I
+          continuously invest in expanding it.
         </p>
         <br />
         <p className="font-text ">

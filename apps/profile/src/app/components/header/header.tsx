@@ -6,7 +6,7 @@ import './header.css';
 function Header() {
   return (
     <div className="desktop-header-flex-box hd-background-color">
-      <div className="p-6">
+      <div className="p-6 shrink-0">
         <Link href="/"> Home </Link>
       </div>
       <div>

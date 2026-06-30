@@ -4,7 +4,8 @@ import './about.css';
 export default function About() {
   return (
     <div className="min-h-screen font-roboto font-400 text-lg leading-relaxed">
-      <div className="max-w-7xl mx-auto px-10 py-8">
+      {/* Horizontal Scroll */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-10 py-8">
         {/* ── HEADER ───────────────────────────────────────────────── */}
         <div className="flex justify-between items-start mb-6">
           <div>
@@ -127,6 +128,7 @@ export default function About() {
                   alt="Sapiens Logo"
                   width={125}
                   height={125}
+                  className="max-w-full h-auto"
                 />
                 <div className="flex gap-2 mt-2 flex-wrap">
                   <Image
@@ -134,6 +136,7 @@ export default function About() {
                     alt="Sapiens Logo"
                     width={125}
                     height={125}
+                    className="max-w-full h-auto"
                   />
 
                   <Image
@@ -141,9 +144,16 @@ export default function About() {
                     alt="LUBA Logo"
                     width={100}
                     height={100}
+                    className="max-w-full h-auto"
                   />
 
-                  <Image src="/sc.png" alt="LUBA Logo" width={80} height={80} />
+                  <Image
+                    src="/sc.png"
+                    alt="LUBA Logo"
+                    width={80}
+                    height={80}
+                    className="max-w-full h-auto"
+                  />
                 </div>
               </>
             }

@@ -1,7 +1,12 @@
 @reference "../../global.css";
 
-.desktop-header-flex-box {
+/* .desktop-header-flex-box {
   @apply flex flex-row justify-around font-roboto;
+} */
+
+/* Horizontal Scroll */
+.desktop-header-flex-box {
+  @apply flex flex-row justify-between items-center font-roboto w-full;
 }
 
 .desktop-nav {
@@ -13,11 +18,11 @@
 }
 
 .mobile-button {
-  @apply flex sm:hidden items-center justify-center p-6;
+  @apply flex sm:hidden items-center justify-center p-6 shrink-0;
 }
 
 .mobile-menu {
-  @apply absolute top-15 right-0 w-30 bg-slate-100 shadow-md border-t sm:hidden;
+  @apply absolute top-15 right-0 w-35 bg-slate-100 shadow-md border-t sm:hidden;
 }
 
 .mobile-menu-list {
