@@ -33,7 +33,7 @@ jobs:
         with:
           images: ${{ secrets.DOCKERHUB_USERNAME }}/profile
           tags: |
-            type=raw,value=1.0.1
+            type=raw,value=latest
             type=sha,format=short
 
       - name: Build and push image

@@ -14,7 +14,7 @@ function LandingPage() {
         />
       </div>
       <div className="xl:w-270">
-        <p className="xl:font-roboto text-4xl">Software Architect!!!!</p>
+        <p className="xl:font-roboto text-4xl">Software Architect</p>
         <p className="font-text ">
           with 20+ years of experience in software architecture and full-stack
           development, I have built my career around one core belief: technology

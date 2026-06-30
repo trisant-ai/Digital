@@ -18,7 +18,6 @@ export default function About() {
               Technology leader, SaaS, Full Stack Software Development
             </p>
             <div className="font-roboto font-400 text-lg space-y-0.5 ">
-              <p>Phone: +1 519 8078126</p>
               <p>
                 Email:
                 <a
