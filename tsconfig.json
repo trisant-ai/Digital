@@ -23,6 +23,12 @@
     },
     {
       "path": "./apps/profile"
+    },
+    {
+      "path": "./apps/i18n-app-e2e"
+    },
+    {
+      "path": "./apps/i18n-app"
     }
   ]
 }
