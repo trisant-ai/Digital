@@ -61,7 +61,7 @@ export default function About() {
             understanding &amp; evaluating them, creating technical proposals,
             architectures, POCs &amp; using them in product development.
             Generated a patent for which I got
-            <strong>patent of the year award</strong> from Samsung R&amp;D
+            <strong> patent of the year award</strong> from Samsung R&amp;D
             Institute India-Bangalore. Looking forward for an opportunity to
             learn &amp; further demonstrate my skillsets.
           </p>
