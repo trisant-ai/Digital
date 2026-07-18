@@ -169,7 +169,7 @@ export default function About() {
               , Canada
             </RoleTitle>
             <p className="mb-1 font-medium">
-              Product Development &amp; Go Live
+              Product Development &amp; Go Live –
             </p>
             <ol className="list-decimal list-inside space-y-1 font-roboto font-400 text-lg">
               <li>
