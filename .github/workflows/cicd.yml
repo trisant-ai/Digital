@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - 'apps/profile/**'
+      - 'package.json'
+      - 'package-lock.json'
       - '.github/workflows/cicd.yml'
   workflow_dispatch: # allows manual trigger from GitHub UI
 
