@@ -1,0 +1,216 @@
+'use client';
+
+import { useState, useRef } from 'react';
+import Image from 'next/image';
+import './claude.css';
+
+// Data Array
+const contents = [
+  {
+    id: 1,
+    title: 'Introduction & Usage',
+    summary:
+      'Claude is a next generation AI assistant built by Anthropic and trained to be safe, accurate, and secure to help you do your best work.',
+    description: {
+      'main-p1':
+        "Claude Code is an agentic AI coding tool by Anthropic. It's available in your terminal, IDE, desktop app, and browser. It can read and edit files, execute commands, and integrate with your development tools to build features, fix bugs, and automate development tasks.",
+      'main-p2':
+        'This article talks about Claude Code usage, its internal working and some of the best practices to use it. ',
+      'main-p3':
+        'Here are three major ways in which you may use Claude Code to design portals:',
+
+      'main.image': '/claude.png',
+      'main.image-alt': 'Claude Code',
+      point1:
+        'Reference Design along with Screenshot approach: In this approach you provide Claude Code with a reference design (figma etc). Based on this Claude Code generates output -component/page. Claude then compares generated output page with reference design. If there are any gaps then Claude again works and generates output page again. If again after comparison there are gaps, then this iteration continues until the result is within 2-3px of the reference design. This way Claude’s generated output closely matches the reference design.',
+      point2:
+        'Give prompt (text/voice) and then continue to improve till the time, output component/page closely matches the reference design.',
+      point3:
+        'Use Component Registry/Marketplace: This let’s designers and developers share UI components that can be copied directly into codebase or install using Claude Code. Copy ready-to-use prompts or use Model Context Protocol (MCP) integrations. Example: https://promptden.com/, https://21st.dev/',
+      'point3.image': '/claude-usage.png',
+      'point3.image-alt': 'Claude Code',
+    },
+    // status: 'Active',
+  },
+];
+
+export default function MasterDetailPage() {
+  const [selectedItemId, setSelectedItemId] = useState<number>(contents[0].id);
+  const detailRef = useRef<HTMLDivElement>(null);
+
+  const selectedItem = contents.find((item) => item.id === selectedItemId);
+
+  const handleItemClick = (id: number) => {
+    setSelectedItemId(id);
+
+    // Smooth scroll to the details panel on mobile screens
+    if (window.innerWidth < 768) {
+      setTimeout(() => {
+        detailRef.current?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      }, 50);
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-slate-50 p-4 md:p-8">
+      <div className="max-w-8xl mx-auto">
+        <h1 className="text-3xl font-extrabold text-black-900 mb-8">
+          Claude Code
+        </h1>
+
+        <div className="flex flex-col md:flex-row gap-6">
+          {/* Master List Section */}
+          <div className="w-full md:w-1/4 flex flex-col gap-3">
+            {contents.map((item) => {
+              const isActive = selectedItemId === item.id;
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => handleItemClick(item.id)}
+                  className={`text-left p-5 rounded-2xl border transition-all duration-200 ${
+                    isActive
+                      ? 'bg-blue-600 border-blue-600 shadow-lg shadow-blue-600/20 text-white'
+                      : 'bg-white border-slate-200 hover:border-blue-400 hover:bg-blue-50 text-black-800'
+                  }`}
+                >
+                  <h2 className="font-semibold text-lg">{item.title}</h2>
+                  <p
+                    className={`text-sm mt-1 line-clamp-1 ${
+                      isActive ? 'text-blue-100' : 'text-slate-500'
+                    }`}
+                  >
+                    {item.summary}
+                  </p>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Details Section */}
+          <div className="w-full md:w-2/3" ref={detailRef}>
+            {selectedItem ? (
+              <div className="bg-white p-6 md:p-10 rounded-2xl border border-slate-200 shadow-sm sticky top-8">
+                <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
+                  <h2 className="text-2xl font-bold text-black-900">
+                    {selectedItem.title}
+                  </h2>
+                  {/* <span className="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-semibold uppercase tracking-wider rounded-full">
+                    {selectedItem.status}
+                  </span> */}
+                </div>
+                <h3 className="text-slate-500 font-medium mb-6">
+                  {selectedItem.summary}
+                </h3>
+                <div className="prose prose-slate max-w-none">
+                  <p className="text-black-700 leading-relaxed text-lg list-[square] list-inside">
+                    {selectedItem.description['main-p1']}
+                  </p>
+                  <p className="text-black-700 leading-relaxed text-lg list-[square] list-inside">
+                    {selectedItem.description['main-p2']}
+                  </p>
+
+                  <Image
+                    src={selectedItem.description['main.image']}
+                    alt={selectedItem.description['main.image-alt']}
+                    width={800}
+                    height={425}
+                    className="claude-main-img"
+                  />
+
+                  <br />
+                  <p className="text-black-700 leading-relaxed text-lg list-[square] list-inside">
+                    {selectedItem.description['main-p3']}
+                  </p>
+                </div>
+
+                <div>
+                  {selectedItem.description.point1 && (
+                    <ul className="list-[square] list-outside pl-5">
+                      <li className="text-black-700 leading-relaxed text-lg">
+                        {selectedItem.description.point1}
+                      </li>
+                    </ul>
+                  )}
+
+                  {selectedItem.description['point1.image'] && (
+                    <Image
+                      src={selectedItem.description['point1.image']}
+                      alt={selectedItem.description['point1.image-alt']}
+                      width={800}
+                      height={425}
+                      className="claude-point-img"
+                    />
+                  )}
+
+                  {selectedItem.description.point2 && (
+                    <ul className="list-[square] list-outside pl-5">
+                      <li className="text-black-700 leading-relaxed text-lg">
+                        {selectedItem.description.point2}
+                      </li>
+                    </ul>
+                  )}
+
+                  {selectedItem.description['point2.image'] && (
+                    <Image
+                      src={selectedItem.description['point2.image']}
+                      alt={selectedItem.description['point2.image-alt']}
+                      width={800}
+                      height={425}
+                      className="claude-point-img"
+                    />
+                  )}
+
+                  {selectedItem.description.point3 && (
+                    <ul className="list-[square] list-outside pl-5">
+                      <li className="text-black-700 leading-relaxed text-lg">
+                        {selectedItem.description.point3}
+                      </li>
+                    </ul>
+                  )}
+
+                  {selectedItem.description['point3.image'] && (
+                    <Image
+                      src={selectedItem.description['point3.image']}
+                      alt={selectedItem.description['point3.image-alt']}
+                      width={800}
+                      height={425}
+                      className="claude-point-img"
+                    />
+                  )}
+                </div>
+              </div>
+            ) : (
+              <div className="bg-white p-10 rounded-2xl border border-slate-200 shadow-sm flex items-center justify-center h-full min-h-[400px]">
+                <p className="text-slate-400 text-lg">
+                  Select an item to view details
+                </p>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Reference Code
+// {selectedItem.description.point1 && (
+//     <ul className="list-[square] list-outside pl-5">
+//       <li className="text-black-700 leading-relaxed text-lg">
+//         {selectedItem.description.point1}
+//       </li>
+//     </ul>
+//   )}
+
+//   {selectedItem.description['point1.image'] && (
+//     <Image
+//       src={selectedItem.description['point1.image']}
+//       alt={selectedItem.description['point1.image-alt']}
+//       width={800}
+//       height={425}
+//       className="claude-point-img"
+//     />
+//   )}

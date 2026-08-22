@@ -1,34 +1,96 @@
 @reference "../../global.css";
 
-/* .desktop-header-flex-box {
-  @apply flex flex-row justify-around font-roboto;
-} */
-
-/* Horizontal Scroll */
+/* ── Header layout ───────────────────────────────────────────── */
 .desktop-header-flex-box {
   @apply flex flex-row justify-between items-center font-roboto w-full;
-}
-
-.desktop-nav {
-  @apply hidden sm:block;
 }
 
 .hd-background-color {
   @apply bg-[#79baec];
 }
 
+/* ── Desktop nav ──────────────────────────────────────────────── */
+.desktop-nav {
+  @apply hidden sm:block;
+}
+
+/* ── Desktop Publications dropdown ───────────────────────────── */
+.pub-wrapper {
+  @apply relative inline-block;
+}
+
+.pub-trigger {
+  /* Matches the padding of sibling <li className="inline-block p-6"> */
+  @apply flex items-center gap-1.5 px-6 py-6
+         bg-transparent border-0 cursor-pointer
+         font-roboto text-base;
+}
+
+.pub-chevron {
+  @apply w-3.5 h-3.5 transition-transform duration-200;
+}
+
+.pub-chevron--open {
+  @apply rotate-180;
+}
+
+.pub-dropdown {
+  @apply absolute top-full left-0 z-50
+         min-w-[160px] list-none
+         bg-white border border-gray-200 rounded-md shadow-lg
+         py-1;
+}
+
+.pub-dropdown-item {
+  @apply block px-4 py-2.5 text-sm text-gray-700
+         no-underline whitespace-nowrap
+         hover:bg-blue-50 hover:text-blue-700
+         transition-colors duration-150;
+}
+
+/* ── Mobile hamburger button ──────────────────────────────────── */
 .mobile-button {
   @apply flex sm:hidden items-center justify-center p-6 shrink-0;
 }
 
+/* ── Mobile menu panel ────────────────────────────────────────── */
 .mobile-menu {
-  @apply absolute top-15 right-0 w-35 bg-slate-100 shadow-md border-t sm:hidden;
+  @apply absolute top-15 right-0 z-50
+         w-48 bg-slate-100 shadow-md border-t sm:hidden;
 }
 
 .mobile-menu-list {
-  @apply flex flex-col;
+  @apply flex flex-col list-none;
 }
 
+/* Shared by both <Link> and <button> children */
 .mobile-menu-item {
-  @apply block px-4 py-3 hover:bg-gray-100;
+  @apply block w-full px-4 py-3 text-left
+         font-roboto text-base
+         bg-transparent border-0 cursor-pointer
+         hover:bg-gray-100;
+}
+
+/* ── Mobile Publications accordion ───────────────────────────── */
+.mobile-pub-trigger {
+  @apply flex items-center justify-between;
+}
+
+.mobile-pub-chevron {
+  @apply w-3.5 h-3.5 transition-transform duration-200;
+}
+
+.mobile-pub-chevron--open {
+  @apply rotate-180;
+}
+
+.mobile-pub-submenu {
+  @apply list-none bg-white border-t border-gray-100;
+}
+
+.mobile-pub-item {
+  @apply block px-7 py-2.5 text-sm text-gray-700
+         no-underline
+         hover:bg-blue-50 hover:text-blue-700
+         transition-colors duration-150;
 }

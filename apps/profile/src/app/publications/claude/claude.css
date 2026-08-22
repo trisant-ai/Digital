@@ -1,0 +1,23 @@
+@reference "../../global.css";
+
+.claude-main-img {
+  @apply rounded-xl;
+}
+
+.claude-point-img {
+  @apply rounded-xl;
+}
+
+/*.main-img {
+  @apply mx-auto rounded-xl object-cover;
+  @apply w-64 h-64;
+  @apply lg:w-80 lg:h-130;
+  @apply xl:w-100 xl:h-110;
+} */
+
+/* .profile-img {
+  @apply mx-auto rounded-xl object-cover;
+  @apply w-64 h-64;
+  @apply lg:w-80 lg:h-130;
+  @apply xl:w-100 xl:h-110;
+} */
