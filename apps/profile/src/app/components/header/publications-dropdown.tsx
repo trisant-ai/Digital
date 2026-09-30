@@ -6,6 +6,7 @@ import Link from 'next/link';
 // Single source of truth — imported by mobile-menu too
 export const PUBLICATION_ITEMS = [
   { label: 'Claude', href: '/publications/claude' },
+  { label: 'VPS Deployment', href: '/publications/vpsd' },
   // { label: 'Tech Talks', href: '/publications/tech-talks' },
   // { label: 'Best Practices', href: '/publications/best-practices' },
   // { label: 'Articles', href: '/publications/articles' },

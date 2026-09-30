@@ -1,0 +1,9 @@
+@reference "../../global.css";
+
+.vpsd-main-img {
+  @apply rounded-xl;
+}
+
+.vpsd-point-img {
+  @apply rounded-xl;
+}
