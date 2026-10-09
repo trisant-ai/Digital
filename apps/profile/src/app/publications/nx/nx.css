@@ -1,0 +1,9 @@
+@reference "../../global.css";
+
+.nx-main-img {
+  @apply rounded-xl;
+}
+
+.nx-point-img {
+  @apply rounded-xl;
+}
