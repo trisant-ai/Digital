@@ -1,0 +1,9 @@
+@reference "../../global.css";
+
+.ai-main-img {
+  @apply rounded-xl;
+}
+
+.ai-point-img {
+  @apply rounded-xl;
+}

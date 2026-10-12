@@ -5,6 +5,7 @@ import Link from 'next/link';
 
 // Single source of truth — imported by mobile-menu too
 export const PUBLICATION_ITEMS = [
+  { label: 'AI, ML, DL, Gen AI, DS', href: '/publications/ai' },
   { label: 'Claude', href: '/publications/claude' },
   { label: 'Nx+Storybook', href: '/publications/nx' },
   { label: 'VPS Deployment', href: '/publications/vpsd' },
